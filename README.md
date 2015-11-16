@@ -9,3 +9,4 @@ we'll filter commited files with the `.rq` extension to distinguish modified
 SPARQL queries. Then we'll retrieve those.
 
 For each new query, we'll add a new route using a template.
+For a modified query, we'll re-render the template with the new query.
