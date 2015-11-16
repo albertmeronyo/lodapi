@@ -1,0 +1,8 @@
+
+SELECT DISTINCT ?pred 
+
+FROM <http://data.socialhistory.org/resource/canfam/dataset/canada1901> 
+
+WHERE {
+    ?sub ?pred ?obj.
+}
