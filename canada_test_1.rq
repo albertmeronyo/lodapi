@@ -1,4 +1,6 @@
 #+endpoint: http://virtuoso.clariah-sdh.eculture.labs.vu.nl/sparql
+#+summary: Vocabulary terms of the Canada dataset
+#+tags: Canada
 
 SELECT DISTINCT ?pred 
 
