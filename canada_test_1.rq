@@ -1,4 +1,4 @@
-#+endlolpoint: http://virtuoso.clariah-sdh.eculture.labs.vu.nl/sparql
+#+endpoint: http://virtuoso.clariah-sdh.eculture.labs.vu.nl/sparql
 
 SELECT DISTINCT ?pred 
 
