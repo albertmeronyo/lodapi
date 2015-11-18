@@ -1,0 +1,27 @@
+#+ endpoint: http://virtuoso.clariah-sdh.eculture.labs.vu.nl/sparql
+#+ summary: Vocabulary terms of the Canada dataset
+#+ tags: 
+#+   - Canada
+ 
+ 
+PREFIX canfam: <http://data.socialhistory.org/vocab/canfam/dimension/>
+PREFIX literate: <http://data.socialhistory.org/resource/canfam/canread/>
+
+SELECT ?age (COUNT(?person_lit) AS ?n_person_lit) ?n_person (xsd:double(xsd:float(COUNT(?person_lit))/xsd:float(?n_person)) AS ?rate)
+
+FROM <http://data.socialhistory.org/resource/canfam/dataset/canada1901>
+
+WHERE {
+    ?person_lit canfam:canread literate:Y.
+    ?person_lit canfam:ageyr ?age .
+    {
+        SELECT (COUNT(?person) as ?n_person) ?age WHERE{
+            ?person canfam:ageyr ?age .
+        }
+        GROUP BY ?age
+    }
+    ?_s ?__p_integer ?_o_en .
+}
+
+GROUP BY ?age ?n_person 
+ORDER BY DESC(?age)
