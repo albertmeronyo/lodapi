@@ -1,0 +1,8 @@
+#+ endpoint: http://fragments.dbpedia.org/2016-04/en
+#+ summary: Led Zeppelin dbpedia triples
+#+ tags:
+#+	- Music bands
+
+subject=http://dbpedia.org/resource/Led_Zeppelin
+predicate=
+object=
