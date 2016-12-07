@@ -1,1 +1,1 @@
-http://lod.cedar-project.nl/cedar-mini/sparql
+http://virtuoso.clariah-sdh.eculture.labs.vu.nl/sparql
