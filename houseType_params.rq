@@ -1,11 +1,6 @@
-#+ summary: Number of housing types according to residence status, location and year
-#+ tags: 
-#+   - houseType
-#+ enumerate:
-#+   - residenceStatus
-#+   - Kom
-#+   - houseType
-#+   - location
+#+ summary: Number of NL housing types according to residence status, location and year
+#+ tags:
+#+   - SPARQL
 
 PREFIX cedar: <http://lod.cedar-project.nl:8888/cedar/resource/>
 PREFIX maritalstatus: <http://lod.cedar-project.nl/vocab/cedar-maritalstatus#>
@@ -14,7 +9,7 @@ PREFIX sdmx-code: <http://purl.org/linked-data/sdmx/2009/code#>
 PREFIX cedarterms: <http://lod.cedar-project.nl/vocab/cedar#>
 PREFIX qb: <http://purl.org/linked-data/cube#>
 PREFIX gg: <http://www.gemeentegeschiedenis.nl/amco/>
- 
+
 SELECT (SUM(?pop) AS ?tot) FROM <urn:graph:cedar-mini:release> WHERE {
 	?obs a qb:Observation.
 	?obs sdmx-dimension:refArea ?_location_iri.
