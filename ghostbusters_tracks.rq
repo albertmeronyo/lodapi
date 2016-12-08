@@ -1,0 +1,10 @@
+#+ summary: Returns the track names of the MIDI file of the Ghostbusters theme
+#+ endpoint: https://raw.githubusercontent.com/albertmeronyo/lodapi/master/ghostbusters.ttl
+#+ tags:
+#+   - RDF dump
+
+PREFIX mid: <<http://example.org/midi/>
+
+SELECT ?track WHERE {
+    ?track a mid:Track .
+}
