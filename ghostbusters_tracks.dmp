@@ -1,5 +1,6 @@
 #+ summary: Returns the track names of the MIDI file of the Ghostbusters theme
 #+ endpoint: https://raw.githubusercontent.com/albertmeronyo/lodapi/master/ghostbusters.ttl
+#+ mime: text/turtle
 #+ tags:
 #+   - RDF dump
 
