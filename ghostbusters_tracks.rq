@@ -3,7 +3,7 @@
 #+ tags:
 #+   - RDF dump
 
-PREFIX mid: <<http://example.org/midi/>
+PREFIX mid: <http://example.org/midi/>
 
 SELECT ?track WHERE {
     ?track a mid:Track .
