@@ -1,0 +1,9 @@
+#+ summary: Returns all triples in a page with embedded RDFa 
+#+ endpoint: http://iricelino.org/rdfa/sample-annotated-page.html
+#+ mime: rdfa
+#+ tags:
+#+   - RDFa
+
+SELECT * WHERE {
+    ?s ?p ?o .
+}
