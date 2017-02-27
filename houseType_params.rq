@@ -1,4 +1,5 @@
 #+ summary: Number of NL housing types according to residence status, location and year
+#+ endpoint: http://virtuoso.clariah-sdh.eculture.labs.vu.nl/sparql
 #+ tags:
 #+   - SPARQL
 #+ enumerate:
