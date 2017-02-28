@@ -8,6 +8,6 @@
 #+   - test5
 #+   - test6
 #+ method: GET
-#+ pagination: 100
+#+ pagination: 200
 
 SELECT * WHERE {?s ?p ?o} LIMIT 100
