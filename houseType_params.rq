@@ -1,13 +1,3 @@
-#+ summary: Number of NL housing types according to residence status, location and year
-#+ endpoint: http://virtuoso.clariah-sdh.eculture.labs.vu.nl/sparql
-#+ tags:
-#+   - SPARQL
-#+ enumerate:
-#+   - residenceStatus
-#+   - Kom
-#+   - year
-#+   - houseType
-#+   - location
 
 PREFIX cedar: <http://lod.cedar-project.nl:8888/cedar/resource/>
 PREFIX maritalstatus: <http://lod.cedar-project.nl/vocab/cedar-maritalstatus#>
@@ -29,3 +19,4 @@ SELECT (SUM(?pop) AS ?tot) FROM <urn:graph:cedar-mini:release> WHERE {
 	?obs cedarterms:residenceStatus ?_residenceStatus_iri .
 	FILTER (NOT EXISTS {?obs cedarterms:isTotal ?total })
 }
+# foo bar
