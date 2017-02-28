@@ -3,8 +3,8 @@
 #+ tags:
 #+   - test1
 #+   - test2
-#+ method: 
-#+ pagination: 
-
+#+   - test3
+#+ method: GET
+#+ pagination: 100
 
 SELECT * WHERE {?s ?p ?o} LIMIT 100
