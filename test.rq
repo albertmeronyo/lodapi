@@ -1,1 +1,9 @@
+#+ summary: Test query for sparql2git
+#+ endpoint: http://virtuoso.amp.ops.labs.vu.nl/sparql
+#+ tags:
+#+   - test1
+#+   - test2
+#+ method: GET
+#+ pagination: 100
+
 SELECT * WHERE {?s ?p ?o} LIMIT 10
