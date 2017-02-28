@@ -1,10 +1,9 @@
-#+ summary: Test query for sparql2git
+#+ summary: Test query for sparql2git foo
 #+ endpoint: http://virtuoso.amp.ops.labs.vu.nl/sparql
 #+ tags:
 #+   - test1
 #+   - test2
 #+   - test3
-#+   - test4
 #+ method: GET
 #+ pagination: 100
 
