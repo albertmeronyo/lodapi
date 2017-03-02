@@ -3,6 +3,6 @@
 #+ tags:
 #+   - dbpedia
 #+ method: GET
-#+ pagination: 100
+#+ pagination: 50
 
 select distinct ?Concept where {[] a ?Concept} LIMIT 10
