@@ -8,7 +8,7 @@
 #+   - test5
 #+   - test6
 #+   - test7
-#+ method: GET
+#+ method: POST
 #+ pagination: 50
 
 SELECT * WHERE {?s ?p ?o} LIMIT 30
