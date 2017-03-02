@@ -11,4 +11,4 @@
 #+ method: GET
 #+ pagination: 50
 
-SELECT * WHERE {?s ?p ?o} LIMIT 20
+SELECT * WHERE {?s ?p ?o} LIMIT 10
