@@ -2,6 +2,7 @@
 #+ endpoint: http://dbpedia.org/sparql
 #+ tags:
 #+   - test
+#+   - test2
 #+ method: GET
 #+ pagination: 100
 
