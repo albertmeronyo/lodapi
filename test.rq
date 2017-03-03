@@ -3,6 +3,6 @@
 #+ tags:
 #+   - test
 #+ method: GET
-#+ pagination: 100
+#+ pagination: 
 
 select * where {?s ?p ?o} limit 10
