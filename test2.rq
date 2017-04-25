@@ -1,9 +1,0 @@
-#+ summary: test2
-#+ endpoint: http://dbpedia.org/sparql
-#+ tags:
-#+   - foo
-#+   - bar
-#+ method: GET
-#+ pagination: 
-
-select * where {?s ?p ?o} limit 10
