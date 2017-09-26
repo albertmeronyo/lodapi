@@ -1,0 +1,48 @@
+#+ occupational status by occupation across multiple countries
+#+ tags:
+#+      - napp
+#+      - clio-infra
+#+      - hisco
+#+      - hiscam
+
+PREFIX napp-dimension: <http://data.socialhistory.org/vocab/napp/dimension/>
+PREFIX clioprop: <http://data.socialhistory.org/resource/clio/property/>
+PREFIX clioind: <http://data.socialhistory.org/resource/clio/indicator/>
+PREFIX clioctr: <http://data.socialhistory.org/resource/clio/country/>
+PREFIX hisco: <http://data.socialhistory.org/vocab/hisco/>
+PREFIX hiscam: <http://data.socialhistory.org/vocab/hiscam/>
+PREFIX sdmx-dimension: <http://purl.org/linked-data/sdmx/2009/dimension#>
+PREFIX sdmx-measure: <http://purl.org/linked-data/sdmx/2009/measure#>
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?occhisco ?hisco ?hiscam ?gdppc ?year ?age
+FROM <http://data.socialhistory.org/resource/napp/dataset/sweden1890>
+FROM <http://data.socialhistory.org/resource/napp/dataset/canada1891>
+FROM <http://data.socialhistory.org/vocab/hisco/>
+FROM <http://data.socialhistory.org/resource/gdppc/assertion/5343176a06654392f04b0dcf163d1f1f0f65ffce/2016-01-21T16:30:48.081802>
+WHERE {
+    # get right clio data and year for right country
+    ?dataset clioprop:indicator clioind:GDPPC1990GKD .
+    ?dataset sdmx-dimension:refArea ?_clioctr .
+    ?dataset sdmx-measure:obsValue ?gdppc .
+    ?dataset sdmx-dimension:refPeriod ?year .
+    FILTER(xsd:int(str(?year)) < 1891) .
+    
+    OPTIONAL{
+        # select variables of interest and filter out bad obs. from census
+        ?person napp-dimension:AGE ?age .
+        ?person napp-dimension:YEAR ?censusyear .        
+        FILTER((?censusyear - ?age) = (xsd:int(str(?year))) && ?age != 999 && ?age > 12) .
+        ?person napp-dimension:OCCHISCO ?occhisco .
+        ?person napp-dimension:CNTRY ?_nappctr .
+        FILTER(?occhisco != 99999) . 
+
+        # occupational mapping
+        ?occhisco (skos:closeMatch | skos:exactMatch) ?hisco .
+        ?hiscoentry hisco:hiscoCode ?hisco . 
+        ?hiscoentry hiscam:hiscamValue ?hiscam .
+        ?hiscoentry qb:refArea hiscam:SE . 
+    }
+} 
+limit 100
