@@ -1,8 +1,10 @@
-#+ summary: Testing DBpedia endpoint with SPARQL2Git
+#+ summary: Testing DBpedia endpoint
 #+ endpoint: http://dbpedia.org/sparql
 #+ tags:
 #+   - dbpedia
 #+ method: GET
 #+ pagination: 50
+#+ defaults:
+#+   - type: http://dbpedia.org/ontology/Band
 
-select distinct ?type where {[] a ?type} LIMIT 20
+select distinct ?s where {?s a ?_type_iri} LIMIT 20
