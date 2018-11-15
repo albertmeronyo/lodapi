@@ -1,8 +1,8 @@
-#+ summary: Number of NL housing types according to residence status, location and year		
-#+ endpoint: http://virtuoso.clariah-sdh.eculture.labs.vu.nl/sparql		
-#+ tags:		
-#+   - SPARQL            
-#+ enumerate:            
+#+ summary: Number of NL housing types according to residence status, location and year
+#+ endpoint: http://virtuoso.clariah-sdh.eculture.labs.vu.nl/sparql
+#+ tags:
+#+   - SPARQL
+#+ enumerate:
 #+   - residenceStatus:
 #+      - http://lod.cedar-project.nl/vocab/cedar-residenceStatus#AltijdAanwezig
 #+      - http://lod.cedar-project.nl/vocab/cedar-residenceStatus#TijdelijkAanwezig
@@ -640,7 +640,6 @@
 #+      - http://www.gemeentegeschiedenis.nl/amco/11434
 #+      - http://www.gemeentegeschiedenis.nl/amco/11436
 #+      - http://www.gemeentegeschiedenis.nl/amco/11445
-
 
 PREFIX cedar: <http://lod.cedar-project.nl:8888/cedar/resource/>
 PREFIX maritalstatus: <http://lod.cedar-project.nl/vocab/cedar-maritalstatus#>
