@@ -2,7 +2,7 @@
   "proto": {
     "id": "?id",
     "type": "$rdf:type$required$var:?_type",
-    "label": "$rdfs:label$required",
+    "label": "$rdfs:label$required$sample",
     "genre": "$dbo:genre$var:?__genre_iri"
   },
   "$prefixes": {
