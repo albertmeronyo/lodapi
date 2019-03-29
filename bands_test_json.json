@@ -1,0 +1,24 @@
+{
+  "proto": {
+    "id" : "?genre",
+    "artist" : {
+      "id": "?band",
+      "album": {
+        "id": "?album",
+        "label": "$dbo:recordLabel$required",
+        "date": "$dbo:releaseDate"
+      }
+    }
+
+  },
+  "$where": [
+    "?band a dbo:Band",
+    "?album a schema:MusicAlbum",
+    "?id dbo:genre ?genre",
+    "?album dbo:artist ?band"
+  ],
+  "$limit": 10000,
+  "$prefixes": {
+    "dbo" : "http://dbpedia.org/ontology/"
+  }
+}
