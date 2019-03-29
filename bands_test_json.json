@@ -18,6 +18,7 @@
     "?album dbo:artist ?band"
   ],
   "$limit": 10000,
+  "grlc": "#+ summary: Testing DBpedia endpoint\n#+ endpoint: http://dbpedia.org/sparql\n#+ tags:\n#+   - sparql\n#+ method: GET\n#+ pagination: 50",
   "$prefixes": {
     "dbo" : "http://dbpedia.org/ontology/"
   }
