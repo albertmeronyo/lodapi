@@ -12,14 +12,16 @@
 
   },
   "$where": [
-    "?band a dbo:Band",
-    "?album a schema:MusicAlbum",
+    "?band rdf:type dbo:Band",
+    "?album rdf:type schema:MusicAlbum",
     "?id dbo:genre ?genre",
     "?album dbo:artist ?band"
   ],
   "$limit": 10000,
-  "grlc": "#+ summary: Testing DBpedia endpoint\n#+ endpoint: http://dbpedia.org/sparql\n#+ tags:\n#+   - sparql\n#+ method: GET\n#+ pagination: 50",
+  "grlc": "#+ summary: Testing SPARQL Transformer in grlc\n#+ endpoint: http://dbpedia.org/sparql\n#+ tags:\n#+   - json\n#+ method: GET\n#+ pagination: 50",
   "$prefixes": {
-    "dbo" : "http://dbpedia.org/ontology/"
+    "dbo" : "http://dbpedia.org/ontology/",
+    "schema" : "http://schema.org/",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   }
 }
