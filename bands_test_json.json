@@ -1,10 +1,10 @@
 {
   "proto": {
-    "id" : "?genre",
+    "id_genre" : "?genre",
     "artist" : {
-      "id": "?band",
+      "id_band": "?band",
       "album": {
-        "id": "?album",
+        "id_album": "?album",
         "label": "$dbo:recordLabel$required",
         "date": "$dbo:releaseDate"
       }
@@ -14,7 +14,7 @@
   "$where": [
     "?band rdf:type dbo:Band",
     "?album rdf:type schema:MusicAlbum",
-    "?id dbo:genre ?genre",
+    "?band dbo:genre ?genre",
     "?album dbo:artist ?band"
   ],
   "$limit": 10000,
