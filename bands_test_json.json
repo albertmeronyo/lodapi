@@ -1,10 +1,10 @@
 {
   "proto": {
-    "id_genre" : "?genre",
+    "id" : "?genre",
     "artist" : {
-      "id_band": "?band",
+      "id": "?band",
       "album": {
-        "id_album": "?album",
+        "id": "?album",
         "label": "$dbo:recordLabel$required",
         "date": "$dbo:releaseDate"
       }
