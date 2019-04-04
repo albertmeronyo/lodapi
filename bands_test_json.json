@@ -18,10 +18,16 @@
     "?album dbo:artist ?band"
   ],
   "$limit": 10000,
-  "grlc": "#+ summary: Testing SPARQL Transformer in grlc\n#+ endpoint: http://dbpedia.org/sparql\n#+ tags:\n#+   - json\n#+ method: GET\n#+ pagination: 50",
   "$prefixes": {
     "dbo" : "http://dbpedia.org/ontology/",
     "schema" : "http://schema.org/",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  },
+  "grlc": {
+    "summary": "Testing SPARQL Transformer in grlc",
+    "endpoint": "http://dbpedia.org/sparql",
+    "tags": [ "json" ],
+    "method": "GET",
+    "pagination": 50
   }
 }
