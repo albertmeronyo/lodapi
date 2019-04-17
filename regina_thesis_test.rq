@@ -1,0 +1,8 @@
+#+ summary: Test for Regina thesis
+#+ endpoint: http://dbpedia.org/sparql
+#+ tags:
+#+   - thesis
+#+ method: GET
+#+ pagination: 50
+
+select ?s ?p where {?s ?p ?_object} LIMIT 1
