@@ -1,8 +1,9 @@
 #+ summary: Test for Regina thesis
-#+ endpoint: http://dbpedia.org/sparql
+#+ endpoint: https://raw.githubusercontent.com/albertmeronyo/lodapi/master/imf_gdppc.csv.nq
 #+ tags:
 #+   - thesis
 #+ method: GET
+#+ mime: application/n-quads
 #+ pagination: 50
 
 select ?s ?p where {?s ?p ?_object} LIMIT 1
