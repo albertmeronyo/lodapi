@@ -1,0 +1,9 @@
+title: LOD API
+contact:
+  name: Albert Meronyo Penyuela
+  url: https://www.albertmeronyo.org
+licence: http://example.org/licence.html
+queries:
+  - https://raw.githubusercontent.com/albertmeronyo/lodapi/master/dbpedia_test.rq
+  - https://raw.githubusercontent.com/albertmeronyo/lodapi/master/ghostbusters_tracks.rq
+  - https://raw.githubusercontent.com/albertmeronyo/lodapi/master/houseType_params.rq
