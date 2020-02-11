@@ -1,0 +1,3 @@
+https://raw.githubusercontent.com/albertmeronyo/lodapi/master/dbpedia_test.rq
+https://raw.githubusercontent.com/albertmeronyo/lodapi/master/ghostbusters_tracks.rq
+https://raw.githubusercontent.com/albertmeronyo/lodapi/master/houseType_params.rq
