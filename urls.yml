@@ -7,3 +7,4 @@ queries:
   - https://raw.githubusercontent.com/albertmeronyo/lodapi/master/dbpedia_test.rq
   - https://raw.githubusercontent.com/albertmeronyo/lodapi/master/ghostbusters_tracks.rq
   - https://raw.githubusercontent.com/albertmeronyo/lodapi/master/houseType_params.rq
+  - https://api.druid.datalegend.net/datasets/datalegend/Clio-Infra/queries/countries-datasets-obs/5
