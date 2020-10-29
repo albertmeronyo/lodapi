@@ -1,0 +1,7 @@
+#+ summary: Lists all DBpedia dbo:Band
+#+ endpoint: http://dbpedia.org/sparql
+#+ method: GET
+#+ pagination: 20
+
+prefix dbo: <http://dbpedia.org/ontology/>
+select distinct ?s where {?s a dbo:Band}
