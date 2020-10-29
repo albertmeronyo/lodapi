@@ -11,5 +11,4 @@
 #+      - http://dbpedia.org/resource/Liverpool
 #+      - http://dbpedia.org/resource/Los_Angeles
 
-
 select distinct ?s where {?s a dbo:Band; dbo:genre ?_genre_iri; dbo:hometown ?_hometown_iri}
