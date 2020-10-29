@@ -1,0 +1,15 @@
+#+ summary: Bands by city and genre
+#+ endpoint: http://dbpedia.org/sparql
+#+ tags:
+#+   - dbpedia
+#+ method: GET
+#+ enumerate:
+#+   - genre:
+#+      - http://dbpedia.org/resource/Rock_music
+#+      - http://dbpedia.org/resource/Jazz
+#+   - hometown:
+#+      - http://dbpedia.org/resource/Liverpool
+#+      - http://dbpedia.org/resource/Los_Angeles
+
+
+select distinct ?s where {?s a dbo:Band; dbo:genre ?_genre_iri; dbo:hometown ?_hometown_iri}
